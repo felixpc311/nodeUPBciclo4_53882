@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require('./config/db');
 const routes = require('./app/routes/users.routes');
 
 
@@ -20,3 +21,5 @@ app.listen(port, (err)=>{
         console.log('Conexion exitosa en '+'http://localhost:'+port);
     }
 });
+
+db();
